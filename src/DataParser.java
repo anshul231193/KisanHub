@@ -125,10 +125,10 @@ public class DataParser {
 				if(i>=8){
 					line = line.replaceAll("\\s+"," ");
 					String[] list = line.split(" ");
-					
+					System.out.println(list[0]+" "+list[list.length-1]);
 					for(int k=1;k<list.length;k++){
 						String result = "";
-						if(list[k].equals("")||list[k]==null)
+						if(list[k].equals("---")||list[k].equals("")||list[k]==null)
 							result += country+","+type+","+list[0]+","+months.get(k)+","+"N/A";
 						else
 							result += country+","+type+","+list[0]+","+months.get(k)+","+list[k];
